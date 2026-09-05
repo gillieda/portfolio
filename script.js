@@ -1,19 +1,11 @@
-const revealItems = document.querySelectorAll('.reveal');
+const contact = document.querySelector('.contact-btn');
+if (contact) contact.removeAttribute('href');
 
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
-    observer.observe(item);
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-} else {
-  revealItems.forEach((item) => item.classList.add('is-visible'));
-}
+});
