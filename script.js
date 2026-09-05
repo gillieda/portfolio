@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-/* Requested visual adjustment: remove the black hero panel and enlarge yellow-marked text. */
+/* Requested visual adjustment: remove the black hero panel and make every yellow-marked text exactly 2x its original size. */
 (() => {
   const style = document.createElement('style');
   style.textContent = `
@@ -21,22 +21,43 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       .hero { grid-template-columns: 1fr !important; }
       .hero-main { min-height: 70vh !important; }
     }
-    .yellow-text-scale { font-size: 2em !important; line-height: 1.15 !important; }
+    .yellow-text-scale { line-height: 1.15 !important; }
   `;
   document.head.appendChild(style);
 
   const isYellow = (value) => {
-    const match = value.match(/rgba?\\((\\d+),\\s*(\\d+),\\s*(\\d+)/i);
+    const match = value && value.match(/rgba?\\((\\d+),\\s*(\\d+),\\s*(\\d+)/i);
     if (!match) return false;
-    const [, r, g, b] = match.map(Number);
-    return r > 190 && g > 170 && b < 100 && g >= b * 1.8;
+    const [, r, g, b] = match.slice(1).map(Number);
+    return r > 190 && g > 150 && b < 130 && g >= b * 1.5;
+  };
+
+  const markAndDouble = (el) => {
+    if (el.classList.contains('yellow-text-scale')) return;
+    const size = parseFloat(getComputedStyle(el).fontSize);
+    if (!Number.isFinite(size) || size <= 0) return;
+    el.classList.add('yellow-text-scale');
+    el.style.setProperty('font-size', `${size * 2}px`, 'important');
   };
 
   document.querySelectorAll('body *').forEach((el) => {
-    if (el.children.length > 0) return;
+    if (!el.textContent.trim()) return;
+
     const cs = getComputedStyle(el);
-    if (isYellow(cs.color) || isYellow(cs.backgroundColor)) {
-      el.classList.add('yellow-text-scale');
+    const before = getComputedStyle(el, '::before');
+    const after = getComputedStyle(el, '::after');
+    const ownYellow = isYellow(cs.color) || isYellow(cs.backgroundColor);
+    const pseudoYellow = isYellow(before.backgroundColor) || isYellow(after.backgroundColor);
+
+    /* For text color, act on the actual text-bearing leaf. */
+    if (el.children.length === 0 && ownYellow) {
+      markAndDouble(el);
+      return;
+    }
+
+    /* For a yellow highlight/background, scale the text-bearing container once. */
+    if (pseudoYellow || (isYellow(cs.backgroundColor) && el.children.length === 0)) {
+      markAndDouble(el);
     }
   });
 })();
