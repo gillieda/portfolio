@@ -1,232 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미령 | 텍스트 콘텐트 크리에이터</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="이미령 — 텍스트 콘텐트 크리에이터, 소설가">
+  <title>이미령 | 텍스트 콘텐트 크리에이터</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="name">이미령</h1>
-                <p class="name-en">LEE MI-RYEONG | 李美怜</p>
-                <p class="title">텍스트 콘텐트 크리에이터</p>
-            </div>
-        </header>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="이미령 포트폴리오 첫 화면">MLR</a>
+    <nav class="navigation" aria-label="주요 메뉴">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#archive">Archive</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-        <!-- About Section -->
-        <section class="section about">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <div class="callout">
-                    <p class="intro">텍스트 기반의 콘텐츠를 기획하고 취재하며 작성합니다.</p>
-                    <p class="intro">엑셀 VBA, Perplexity AI 챗봇을 비롯한 디지털 도구를 활용하여 논리를 더합니다.</p>
-                </div>
-                <div class="contact">
-                    <a href="mailto:closedbook.lee@gmail.com" class="email-link">closedbook.lee@gmail.com</a>
-                </div>
-            </div>
-        </section>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">TEXT · STORY · EDITING</p>
+      <h1 id="hero-title">이미령<span class="hero-dot">.</span></h1>
+      <p class="hero-name">LEE MI-RYEONG &nbsp;|&nbsp; 李美怜</p>
+      <p class="hero-role">텍스트 콘텐트 크리에이터 · 소설가</p>
+      <a class="hero-link" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+    </section>
 
-        <!-- Education Section -->
-        <section class="section education">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2026.08.</div>
-                        <h3 class="timeline-title">서울과학기술대학교 대학원 문예창작학과 (소설 전공)</h3>
-                        <p class="timeline-description">석사 졸업</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="about" class="section about-section">
+      <div class="section-kicker">01 / ABOUT</div>
+      <div class="section-grid">
+        <h2>문장을 기획하고,<br>이야기를 설계합니다.</h2>
+        <div class="section-body">
+          <p class="lead">텍스트 기반의 콘텐츠를 기획하고 취재하며 작성합니다. 엑셀 VBA, Perplexity AI 챗봇을 비롯한 디지털 도구를 활용하여 논리를 더합니다.</p>
+          <p>소설·에세이·웹진·뉴스레터·채팅 소설과 단행본 편집까지, 읽는 사람에게 정확하게 닿는 텍스트의 형태를 탐색합니다.</p>
+          <dl class="profile-list">
+            <div><dt>Education</dt><dd>2026.08. 서울과학기술대학교 대학원 문예창작학과<br>(소설 전공) 석사 졸업</dd></div>
+            <div><dt>Based in</dt><dd>Seoul, Korea</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-        <!-- Career Section -->
-        <section class="section career">
-            <h2 class="section-title">Career</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021.08. ~ 현재</div>
-                        <h3 class="timeline-title">예스24 커뮤니티파트</h3>
-                        <p class="timeline-description">프리랜서/재택 | 서평단 관리, 리뷰 모니터링 등 서비스 운영지원</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2025.04. ~ 2025.12.</div>
-                        <h3 class="timeline-title">노원문화재단 노원아띠 PM</h3>
-                        <p class="timeline-description">프리랜서 | 뉴스레터 기획/편집, 기자단 관리 등</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2010.02. ~ 2015.06.</div>
-                        <h3 class="timeline-title">패브릭카페</h3>
-                        <p class="timeline-description">쇼핑몰, 오픈마켓 기획 등 총괄</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2006.01. ~ 2010.01.</div>
-                        <h3 class="timeline-title">한페이지단편소설</h3>
-                        <p class="timeline-description">단행본 편집</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="work" class="section work-section">
+      <div class="section-kicker">02 / CAREER</div>
+      <div class="section-heading">
+        <h2>Professional<br>experience.</h2>
+        <p>콘텐츠 운영, 기획, 편집과 창작을 넘나드는 실무 경험</p>
+      </div>
+      <div class="career-list">
+        <article class="career-item">
+          <p class="career-period">2021.08 — Present</p>
+          <div><h3>예스24 커뮤니티파트</h3><p>프리랜서 · 재택</p></div>
+          <p class="career-detail">서평단 관리, 리뷰 모니터링 등 서비스 운영 지원</p>
+        </article>
+        <article class="career-item">
+          <p class="career-period">2025.04 — 2025.12</p>
+          <div><h3>노원문화재단 〈노원아띠〉 PM</h3><p>프리랜서</p></div>
+          <p class="career-detail">뉴스레터 기획·편집, 기자단 관리 등</p>
+        </article>
+        <article class="career-item">
+          <p class="career-period">2010.02 — 2015.06</p>
+          <div><h3>패브릭카페</h3><p>기획 총괄</p></div>
+          <p class="career-detail">쇼핑몰 및 오픈마켓 기획 전반</p>
+        </article>
+        <article class="career-item">
+          <p class="career-period">2006.01 — 2010.01</p>
+          <div><h3>한페이지단편소설</h3><p>편집</p></div>
+          <p class="career-detail">단행본 편집</p>
+        </article>
+      </div>
+    </section>
 
-        <!-- Projects & Activities Section -->
-        <section class="section projects">
-            <h2 class="section-title">Projects & Activities</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2026.</div>
-                        <h3 class="timeline-title">서울예술인지원센터 아카데미 'MEET-UP' 스토리 워크숍</h3>
-                        <p class="timeline-description">참여</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2025.</div>
-                        <h3 class="timeline-title">원미닛고 숏폼</h3>
-                        <p class="timeline-description">원고 제공</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2022.</div>
-                        <h3 class="timeline-title">라우드소싱 네이밍 공모</h3>
-                        <p class="timeline-description">채택</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2022. ~ 2021.</div>
-                        <h3 class="timeline-title">서교출판사</h3>
-                        <p class="timeline-description">에세이 [내 기분은 내가 결정합니다], 소설 [소울 아프리카], 미술에세이 [나는 행복을 그립니다] 교정교열 작업. 50 부작 호러 채팅 소설 작업</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020.</div>
-                        <h3 class="timeline-title">AI 챗봇 썰풀리</h3>
-                        <p class="timeline-description">채팅 소설 작업</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020.</div>
-                        <h3 class="timeline-title">시민과 함께하는 SBA 글판 공모전</h3>
-                        <p class="timeline-description">우수상 수상</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020.</div>
-                        <h3 class="timeline-title">제 36 회 용산도서관 창작시공모전</h3>
-                        <p class="timeline-description">일반부 최우수상 수상</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019.</div>
-                        <h3 class="timeline-title">SF 스릴러 소설 ≪검은 섬≫</h3>
-                        <p class="timeline-description">출판사 고즈넉이엔티 출간. 예술인복지법상 예술인 패스 발급</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2018.</div>
-                        <h3 class="timeline-title">데뷔작가 양성프로그램</h3>
-                        <p class="timeline-description">선정 (문화체육관광부 주최 / 한국콘텐츠진흥원 주관)</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2016.</div>
-                        <h3 class="timeline-title">고양이 동화책 ≪채널 냥고 ON AIR≫</h3>
-                        <p class="timeline-description">출간. 언리미티드 에디션, 홍대상상마당전 참여</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2016.</div>
-                        <h3 class="timeline-title">들려주는 연극 &lt;벽오금학도&gt;</h3>
-                        <p class="timeline-description">연극 대본 각색</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2008.</div>
-                        <h3 class="timeline-title">부산지역 문화잡지 voila</h3>
-                        <p class="timeline-description">객원 필진</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="section selected-section" aria-labelledby="selected-title">
+      <div class="section-kicker">03 / SELECTED WORKS</div>
+      <h2 id="selected-title">Writing, editing<br>&amp; publishing.</h2>
+      <div class="work-grid">
+        <article class="feature-card card-one">
+          <p class="card-index">01</p>
+          <div><p class="card-type">NOVEL · 2019</p><h3>≪검은 섬≫</h3><p>SF 스릴러 소설 · 고즈넉이엔티 출간</p></div>
+        </article>
+        <article class="feature-card card-two">
+          <p class="card-index">02</p>
+          <div><p class="card-type">CHILDREN'S BOOK · 2016</p><h3>≪채널 냥고 ON AIR≫</h3><p>고양이 동화책 출간 · 언리미티드 에디션, 홍대상상마당전 참여</p></div>
+        </article>
+        <article class="feature-card card-three">
+          <p class="card-index">03</p>
+          <div><p class="card-type">EDITING · 2021—2022</p><h3>서교출판사</h3><p>≪내 기분은 내가 결정합니다≫, ≪소울 아프리카≫, ≪나는 행복을 그립니다≫ 교정·교열</p></div>
+        </article>
+        <article class="feature-card card-four">
+          <p class="card-index">04</p>
+          <div><p class="card-type">DIGITAL STORY · 2020</p><h3>AI 챗봇 썰풀리</h3><p>채팅 소설 작업 · 50부작 호러 채팅 소설</p></div>
+        </article>
+      </div>
+    </section>
 
-        <!-- Certifications Section -->
-        <section class="section certifications">
-            <h2 class="section-title">Certifications</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2000.</div>
-                        <h3 class="timeline-title">워드프로세서 1 급</h3>
-                        <p class="timeline-description">대한상공회의소</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2001.</div>
-                        <h3 class="timeline-title">컴퓨터활용능력 2 급</h3>
-                        <p class="timeline-description">대한상공회의소</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2001.</div>
-                        <h3 class="timeline-title">회계정보처리사 2 급</h3>
-                        <p class="timeline-description">교육소프트웨어진흥센터</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="archive" class="section archive-section">
+      <div class="section-kicker">04 / ARCHIVE</div>
+      <div class="section-heading">
+        <h2>Activities<br>&amp; awards.</h2>
+      </div>
+      <ol class="archive-list">
+        <li><time>2026</time><p>서울예술인지원센터 아카데미 ‘MEET-UP’ 스토리 워크숍 참여</p></li>
+        <li><time>2025</time><p>원미닛고 숏폼 원고 제공</p></li>
+        <li><time>2022</time><p>라우드소싱 네이밍 공모 채택</p></li>
+        <li><time>2020</time><p>시민과 함께하는 SBA 글판 공모전 우수상 수상</p></li>
+        <li><time>2020</time><p>제36회 용산도서관 창작시공모전 일반부 최우수상 수상</p></li>
+        <li><time>2018</time><p>데뷔작가 양성프로그램 선정 — 문화체육관광부 주최 · 한국콘텐츠진흥원 주관</p></li>
+        <li><time>2016</time><p>들려주는 연극 〈벽오금학도〉 연극 대본 각색</p></li>
+        <li><time>2008</time><p>부산지역 문화잡지 <em>voila</em> 객원 필진</p></li>
+      </ol>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>감사합니다.</p>
-            <p class="copyright">ⓒ 2026 이미령. All rights reserved.</p>
-        </footer>
-    </div>
+    <section class="section credentials-section">
+      <div class="section-kicker">05 / CREDENTIALS</div>
+      <div class="credentials">
+        <h2>Certificates.</h2>
+        <ul>
+          <li><span>2000</span>워드프로세서 1급 <small>대한상공회의소</small></li>
+          <li><span>2001</span>컴퓨터활용능력 2급 <small>대한상공회의소</small></li>
+          <li><span>2001</span>회계정보처리사 2급 <small>교육소프트웨어진흥센터</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <p class="eyebrow">LET'S WORK TOGETHER</p>
+      <h2>좋은 이야기가<br>필요하신가요?</h2>
+      <a href="mailto:closedbook.lee@gmail.com">closedbook.lee@gmail.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 LEE MI-RYEONG. ALL RIGHTS RESERVED.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
 </body>
 </html>
