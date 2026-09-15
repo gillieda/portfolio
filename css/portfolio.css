@@ -1,0 +1,203 @@
+/*
+ * Portfolio CSS for Rieun
+ * Based on Cargo site styles
+ */
+@font-face {
+    font-display: block;
+    font-family: "Arizona Sans Variable";
+    src: url("https://type.cargo.site/files/CargoArizonaPlusVariable.woff2") format("woff2-variations");
+    font-style: normal;
+    font-weight: 200 700;
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Arizona Sans Variable";
+    src: url("https://type.cargo.site/files/CargoArizonaPlusItalicVariable.woff2") format("woff2-variations");
+    font-style: italic;
+    font-weight: 200 700;
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Diatype Variable";
+    src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff2") format("woff2-variations");
+    font-style: normal;
+    font-weight: 200 1000;
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Diatype Variable";
+    src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff2") format("woff2-variations");
+    font-style: italic;
+    font-weight: 200 1000;
+}
+
+:root {
+    --fontFamily-default: 'Arizona Sans Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --fontSize-default: 14px;
+    --lineHeight-default: 1.6;
+    --baseColor-default-rgb: 0, 0, 0;
+    --baseColor-default-reverse-rgb: 255, 255, 255;
+    --baseColor-accent-rgb: 0, 0, 0;
+    --baseColor-accent-reverse-rgb: 255, 255, 255;
+    --ui-background-default: rgba(255, 255, 255, 0.9);
+    --ui-background-container: rgba(255, 255, 255, 0.95);
+    --ui-color-default: #000000;
+    --ui-color-flat-reverse: #ffffff;
+    --ui-padding-default-vertical: 8px;
+    --ui-padding-default-horizontal: 12px;
+    --ui-padding-uiWindow: 20px;
+    --ui-button-border-radius: 6px;
+    --ui-width-uiWindow: 400px;
+    --modalRadiusLarge: 12px;
+    --modalRadiusLarge-inner: 12px;
+    --window-boxShadow-default: 0 4px 24px rgba(0, 0, 0, 0.15);
+    --account-manager-letter-spacing: -0.01em;
+    --height-row: 40px;
+    --element-gap: 12px;
+    --spacing-1: 8px;
+    --opacity-downstate-default: 0.7;
+    --ui-maxWidth-mobile: 100%;
+    --ui-lineHeight-default: 1.5;
+    --ui-load-spinner-large-speed: 1s;
+    --layer-9: 900;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13.1184px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    font-family: var(--fontFamily-default);
+    color: rgb(var(--baseColor-default-rgb));
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.03em;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+}
+
+main {
+    margin-bottom: 60px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.02em;
+}
+
+p {
+    margin: 0 0 12px 0;
+    line-height: 1.7;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    
+    #content {
+        padding: 30px 16px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --baseColor-default-rgb: 255, 255, 255;
+        --baseColor-default-reverse-rgb: 0, 0, 0;
+        --ui-background-default: rgba(30, 30, 30, 0.9);
+        --ui-background-container: rgba(20, 20, 20, 0.95);
+        --ui-color-default: #ffffff;
+    }
+    
+    html {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    a {
+        color: #ffffff;
+    }
+    
+    footer {
+        border-top-color: #333;
+        color: #777;
+    }
+}
